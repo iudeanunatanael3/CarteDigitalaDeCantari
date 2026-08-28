@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartea de Cântări</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="top-bar">
+            <h1>Cântări</h1>
+
+            <button
+                id="themeToggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Activează tema întunecată"
+                aria-pressed="false"
+            >
+                <span class="theme-icon theme-icon-sun" aria-hidden="true">☼</span>
+                <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-thumb" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Caută cântări după număr sau titlu..."
+                autocomplete="off"
+            >
+            <div id="searchSuggestions" class="search-suggestions" role="listbox"></div>
+        </div>
+
+        <div id="favoritesHeader" class="section-header">
+            <h2>Favorite</h2>
+        </div>
+
+        <div id="favoritesList"></div>
+
+        <div id="songsHeader" class="section-header">
+            <h2>Toate cântările</h2>
+        </div>
+
+        <div id="songsList"></div>
+
+        <button id="showMoreBtn" class="show-more-btn" type="button">
+            Vezi mai multe
+        </button>
+
+    </div>
+
+    <div id="songModal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-toolbar">
+                <button id="closeBtn" type="button" aria-label="Înapoi la lista de cântări">
+                    <img src="icons/arrow2.svg" alt="Înapoi">
+                </button>
+
+                <div class="modal-search-box">
+                    <input
+                        type="text"
+                        id="modalSearchInput"
+                        placeholder="Caută o altă cântare..."
+                        autocomplete="off"
+                    >
+                    <div id="modalSearchSuggestions" class="search-suggestions" role="listbox"></div>
+                </div>
+            </div>
+
+            <h2 id="songTitle"></h2>
+
+            <pre id="songText"></pre>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
